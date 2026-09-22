@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+
+/* Header */
+
+.header {
+    height: 70px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #111827;
+    border-bottom: 1px solid #263244;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.8),
+        rgba(15, 23, 42, 0.95));
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+
+/* Search */
+
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 15px;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    border: none;
+    background: #2563eb;
+    color: white;
+
+    padding: 0 25px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Movies */
+
+main {
+    padding: 60px 8%;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+}
+
+select {
+    background: #1e293b;
+    color: white;
+
+    border: 1px solid #334155;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+}
+
+
+/* Movie Cards */
+
+.movie-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(200px, 1fr));
+
+    gap: 25px;
+}
+
+.movie-card {
+    background: #1e293b;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 18px;
+}
+
+.movie-info h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.movie-meta {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #facc15;
+}
+
+.movie-info p {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* About */
+
+.about {
+    padding: 70px 8%;
+
+    background: #111827;
+
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #94a3b8;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    background: #020617;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .search-box {
+        flex-direction: column;
+
+        background: transparent;
+
+        gap: 10px;
+    }
+
+    .search-box input {
+        border-radius: 8px;
+    }
+
+    .search-box button {
+        padding: 14px;
+    }
+
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}

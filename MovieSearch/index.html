@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFind - Movie Search</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            🎬 CineFind
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Find Your Next Movie</h1>
+
+            <p>
+                Search thousands of movies and discover something amazing to watch.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for a movie..."
+                >
+
+                <button onclick="searchMovies()">
+                    🔍 Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Movie Section -->
+    <main id="movies">
+
+        <div class="section-title">
+            <h2>Popular Movies</h2>
+
+            <select id="genreFilter" onchange="filterMovies()">
+                <option value="all">All Genres</option>
+                <option value="action">Action</option>
+                <option value="drama">Drama</option>
+                <option value="comedy">Comedy</option>
+                <option value="sci-fi">Sci-Fi</option>
+            </select>
+        </div>
+
+
+        <div id="movieContainer" class="movie-container"></div>
+
+    </main>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About CineFind</h2>
+
+        <p>
+            CineFind is a simple movie discovery application built using
+            HTML, CSS and JavaScript.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 CineFind | Movie Search Application</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
